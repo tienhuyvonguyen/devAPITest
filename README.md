@@ -16,6 +16,7 @@
             - password: admin
             - NOTE: run this command before access admin panel ( still improving ): docker exec -it apidev-web-server-1 bash /root/config.sh
         + for api development: http://localhost:9090/api/*
+            - WARNING: RUN this command before access to API: docker exec -it apidev-web-server-1 bash /root/config.sh
             - Use Postman to control and perform api testing
             - OpenAPI document at: http://localhost:9090/document.html
 * Funtions 
