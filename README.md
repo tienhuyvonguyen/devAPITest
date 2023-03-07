@@ -14,9 +14,9 @@ Hosted and quick test at: http://143.42.66.73:9090/document.html
         + for admin panel: http://localhost:9090
             - username: admin
             - password: admin
-            - NOTE: run this command before access admin panel ( still improving ): docker exec -it apidev-web-server-1 bash /root/config.sh
+            - NOTE: run this command before access admin panel ( still improving ): docker exec -it devapitest-web-server-1 bash /root/config.sh
         + for api development: http://localhost:9090/api/*
-            - WARNING: RUN this command before access to API: docker exec -it apidev-web-server-1 bash /root/config.sh
+            - WARNING: RUN this command before access to API: docker exec -it devapitest-web-server-1 bash /root/config.sh
             - OpenAPI document at: http://localhost:9090/document.html
             - Quick try at: http://143.42.66.73:9090/document.html
 * Funtions 
