@@ -20,4 +20,4 @@
 * Funtions 
     - CRUD API
     - JWT
-    - Document
+    - Document with OpenAPI
