@@ -1,0 +1,270 @@
+openapi: 3.0.3
+info:
+  title: Web201 API Dev
+  version: 1.0.0
+  contact: {}
+servers:
+- url: http://143.42.66.73:9090
+components: 
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security: 
+  -  bearerAuth: []
+paths:
+  /public/api/login.php:
+    post:
+      tags:
+      - Public
+      summary: login
+      description: login
+      operationId: login
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+                  example: dora
+                username:
+                  type: string
+                  example: dora
+      responses:
+        '200':
+          description: ''
+  /public/api/register.php:
+    post:
+      tags:
+      - Public
+      summary: register
+      description: register
+      operationId: register
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: test@gmail.com
+                password:
+                  type: string
+                  example: test123
+                username:
+                  type: string
+                  example: test123
+      responses:
+        '200':
+          description: ''
+  /public/api/test.php:
+    get:
+      tags:
+      - Public
+      summary: test
+      description: test
+      operationId: test
+      responses:
+        '200':
+          description: ''
+  /api/user/read.php:
+    get:
+      tags:
+      - User
+      summary: read single user
+      description: read single user
+      operationId: readSingleUser
+      parameters:
+      - name: view
+        in: query
+        schema:
+          type: string
+          example: single
+      - name: username
+        in: query
+        schema:
+          type: string
+          example: ec133
+      responses:
+        '200':
+          description: ''
+  /api/user/create.php:
+    post:
+      tags:
+      - User
+      summary: create user
+      description: create user
+      operationId: createUser
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: echo@gmail.com
+                password:
+                  type: string
+                  example: ec133
+                username:
+                  type: string
+                  example: ec133
+      responses:
+        '200':
+          description: ''
+  /api/user/update.php:
+    put:
+      tags:
+      - User
+      summary: update user
+      description: update user
+      operationId: updateUser
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: ec133@gmail.com
+                username:
+                  type: string
+                  example: ec133
+            example:
+              email: ec133@gmail.com
+              username: ec133
+      responses:
+        '200':
+          description: ''
+  /api/user/delete.php:
+    delete:
+      tags:
+      - User
+      summary: delete user
+      description: delete user
+      operationId: deleteUser
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                  example: ec133
+            example:
+              username: ec133
+      responses:
+        '200':
+          description: ''
+  /api/product/read.php:
+    get:
+      tags:
+      - Product
+      summary: get product by ID
+      description: get product by ID
+      operationId: getProductById
+      parameters:
+      - name: view
+        in: query
+        schema:
+          type: string
+          example: single
+      - name: id
+        in: query
+        schema:
+          type: string
+          example: '28'
+      responses:
+        '200':
+          description: ''
+  /api/product/create.php:
+    post:
+      tags:
+      - Product
+      summary: create product
+      description: create product
+      operationId: createProduct
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: test123
+                price:
+                  type: string
+                  example: '10.50'
+                stock:
+                  type: string
+                  example: '10'
+      responses:
+        '200':
+          description: ''
+  /api/product/update.php:
+    put:
+      tags:
+      - Product
+      summary: update product
+      description: update product
+      operationId: updateProduct
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  example: '28'
+                name:
+                  type: string
+                  example: test111
+                price:
+                  type: string
+                  example: '1100'
+                stock:
+                  type: string
+                  example: '1100'
+            example:
+              id: '28'
+              name: test111
+              price: '1100'
+              stock: '1100'
+      responses:
+        '200':
+          description: ''
+  /api/product/delete.php:
+    delete:
+      tags:
+      - Product
+      summary: delete product
+      description: delete product
+      operationId: deleteProduct
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  example: '28'
+            example:
+              id: '28'
+      responses:
+        '200':
+          description: ''
+tags:
+- name: Public
+- name: User
+- name: Product
+

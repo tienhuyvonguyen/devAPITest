@@ -1,0 +1,10 @@
+filter:
+    excluded_paths:
+        - doc/*
+        - vendor/*
+        - example/*
+        - tests/Parser/Php/ParserTest/*
+        - tests/Parser/Php/PreprocessorTest/*
+checks:
+    php:
+        duplication: false
