@@ -19,6 +19,6 @@
             - WARNING: RUN this command before access to API: docker exec -it apidev-web-server-1 bash /root/config.sh
             - OpenAPI document at: http://localhost:9090/document.html
 * Funtions 
-    - CRUD API
+    - CRUD
     - JWT
     - Document with OpenAPI
