@@ -3,8 +3,6 @@ info:
   title: Web201 API Dev
   version: 1.0.0
   contact: {}
-servers:
-- url: http://143.42.66.73:9090
 components: 
   securitySchemes:
     bearerAuth:
